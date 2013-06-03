@@ -6,15 +6,16 @@ from config import REMOVE_LABEL_FILES
 
 @view_config(renderer="index.pt")
 def index_view(request):
+    print request.GET
     return {}
 
 
 @view_config(name='render')
 def test_page(request):
-    g = Godsflagga(request.POST['part_no'], request.POST['quantity'],
-                   request.POST['vendor_lot'], request.POST['vendor_number'],
-                   request.POST['serial'],request.POST['description'],
-                   request.POST['date'],request.POST['po_number'])
+    g = Godsflagga(request.GET['part_no'], request.GET['quantity'],
+                   request.GET['vendor_lot'], request.GET['vendor_number'],
+                   request.GET['serial'],request.GET['description'],
+                   request.GET['date'],request.GET['po_number'])
 
     filedict = g.create()
 

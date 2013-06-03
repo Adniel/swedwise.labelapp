@@ -13,31 +13,31 @@
 <div class="left" />
 <div class="content">
 <h1><img src="/static/shipment.png" height="45"/> GODSFLAGGA</h1>
-<form action="render" method="post"  name="flag">
+<form action="render" method="get"  name="flag">
 <dl>
 	<dt>PartNo</dt>
-	<dd><input name="part_no" id="part_no" /></dd>
+	<dd><input name="part_no" id="part_no" value="${request.GET.get('part_no')}"/></dd>
 
 	<dt>Quantity</dt>
-	<dd><input name="quantity" /></dd>
+	<dd><input name="quantity"  value="${request.GET.get('quantity')}"/></dd>
 
 	<dt>Description</dt>
-	<dd><input name="description" /></dd>
+	<dd><input name="description"  value="${request.GET.get('description')}"/></dd>
 
 	<dt>Vendor lot</dt>
-	<dd><input name="vendor_lot" /></dd>
+	<dd><input name="vendor_lot"  value="${request.GET.get('vendor_lot')}"/></dd>
 
 	<dt>Date</dt>
-	<dd><input name="date" /></dd>
+	<dd><input name="date" value="${request.GET.get('date')}"/></dd>
 
 	<dt>PO Number</dt>
-	<dd><input name="po_number" /></dd>	
+	<dd><input name="po_number"  value="${request.GET.get('po_number')}"/></dd>	
 
 	<dt>Vendor number (RYD3)</dt>
-	<dd><input name="vendor_number" /></dd>
+	<dd><input name="vendor_number" value="${request.GET.get('vendor_number')}"/></dd>
 
 	<dt>Serial</dt>
-	<dd><input name="serial" /></dd>
+	<dd><input name="serial"  value="${request.GET.get('serial')}"/></dd>
 
 	<dt></dt>
 	<dd><input class="buttons" type="submit" value="Skapa"></dd>
