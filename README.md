@@ -21,8 +21,8 @@ Run application by using:
 $ ./venv/bin/python application.py
 
 Label form can be pre-filled using query string:
-	http://localhost:8080/?part_no=55669905&quantity=400&description=Beskrivning&vendor_lot=100&serial=01&po_number=1212&vendor_number=RYD3&date=20051005
+- Open form: http://localhost:8080/?part_no=55669905&quantity=400&description=Beskrivning&vendor_lot=100&serial=01&po_number=1212&vendor_number=RYD3&date=20051005
 and labels can be directly rendered using the very same query string:
-	http://localhost:8080/render?part_no=55669905&quantity=400&description=Beskrivning&vendor_lot=100&serial=01&po_number=1212&vendor_number=RYD3&date=20051005
+- Open label: http://localhost:8080/render?part_no=55669905&quantity=400&description=Beskrivning&vendor_lot=100&serial=01&po_number=1212&vendor_number=RYD3&date=20051005
 
 Set up supervisor according to separate documentation
