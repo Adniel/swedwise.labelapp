@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 import random
-from config import COLOPHONE
+from config import COLOPHONE, TEMP_FILE_PATH
 
 
 class Godsflagga():
@@ -22,7 +22,7 @@ class Godsflagga():
     def create(self):
         random_no = random.randint(1000000, 9999999)
         filename = str(random_no) + ".pdf"
-        filepath = "./out/"
+        filepath = TEMP_FILE_PATH
         filenamepath = filepath + filename
 
         c = canvas.Canvas(filenamepath, pagesize=A4)

@@ -2,6 +2,7 @@ from pyramid.view import view_config
 from pyramid.response import FileResponse
 from godsflagga import Godsflagga
 import os
+from config import REMOVE_LABEL_FILES
 
 @view_config(renderer="index.pt")
 def index_view(request):
@@ -23,9 +24,11 @@ def test_page(request):
         content_type='application/pdf',
         )
     response.content_disposition = 'attachment; filename="%s"' % filedict.get('FILENAME')
-    try:
-        os.remove(filedict.get('FILENAMEPATH'))
-    except Exception, ex:
-        print 'Could not remove file', ex
+
+    if REMOVE_LABEL_FILES:
+        try:
+            os.remove(filedict.get('FILENAMEPATH'))
+        except Exception, ex:
+            print 'Could not remove file', ex
 
     return response
