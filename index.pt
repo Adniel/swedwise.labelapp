@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>GODSFLAGGA</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+<h1>GODSFLAGGA</h1>
+<form action="render" method="post" target="_blank" name="flag">
+<dl>
+	<dt>PartNo</dt>
+	<dd><input name="part_no" /></dd>
+
+	<dt>Quantity</dt>
+	<dd><input name="quantity" /></dd>
+
+	<dt>Description</dt>
+	<dd><input name="description" /></dd>
+
+	<dt>Vendor lot</dt>
+	<dd><input name="vendor_lot" /></dd>
+
+	<dt>Date</dt>
+	<dd><input name="date" /></dd>
+
+	<dt>PO Number</dt>
+	<dd><input name="po_number" /></dd>	
+
+	<dt>Vendor number (RYD3)</dt>
+	<dd><input name="vendor_number" /></dd>
+
+	<dt>Serial</dt>
+	<dd><input name="serial" /></dd>
+
+</dl>
+<input type="submit">
+</form>
+</body>
+</html>
