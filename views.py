@@ -6,7 +6,7 @@ from config import REMOVE_LABEL_FILES
 
 @view_config(renderer="index.pt")
 def index_view(request):
-    print request.GET
+    #print request.GET
     return {}
 
 
