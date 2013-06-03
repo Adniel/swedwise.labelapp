@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 import random
-from config import COLOPHONE, TEMP_FILE_PATH
+from config import COLOPHONE, TEMP_FILE_PATH, AUTO_PRINT
 
 
 class Godsflagga():
@@ -24,6 +24,11 @@ class Godsflagga():
         filename = str(random_no) + ".pdf"
         filepath = TEMP_FILE_PATH
         filenamepath = filepath + filename
+
+        if AUTO_PRINT:
+            from reportlab.pdfbase import pdfdoc
+            pdfdoc.PDFCatalog.OpenAction = '<</S/JavaScript/JS(this.print\({bUI:true,bSilent:false,bShrinkToFit:true}\);)>>'
+            pdfdoc.PDFInfo.title = 'Label ' + filename
 
         c = canvas.Canvas(filenamepath, pagesize=A4)
 
