@@ -2,13 +2,21 @@
 <head>
     <title>GODSFLAGGA</title>
     <link rel="stylesheet" href="/static/style.css"/>
-</head>
-<body>
-<h1>GODSFLAGGA</h1>
-<form action="render" method="post" target="_blank" name="flag">
+	 <script type="text/javascript">
+	 function FocusOnInput()
+	 {
+	 document.getElementById("part_no").focus();
+	 }
+	 </script>
+	</head>
+<body onload="FocusOnInput()">
+<div class="left" />
+<div class="content">
+<h1><img src="/static/shipment.png" height="45"/> GODSFLAGGA</h1>
+<form action="render" method="post"  name="flag">
 <dl>
 	<dt>PartNo</dt>
-	<dd><input name="part_no" /></dd>
+	<dd><input name="part_no" id="part_no" /></dd>
 
 	<dt>Quantity</dt>
 	<dd><input name="quantity" /></dd>
@@ -31,8 +39,13 @@
 	<dt>Serial</dt>
 	<dd><input name="serial" /></dd>
 
+	<dt></dt>
+	<dd><input class="buttons" type="submit" value="Skapa"></dd>
+
 </dl>
-<input type="submit">
 </form>
+</div>
+<div class="left">
+
 </body>
 </html>

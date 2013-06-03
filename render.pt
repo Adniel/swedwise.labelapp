@@ -1,8 +1,0 @@
-<html>
-<head>
-    <title>${FILENAME} </title>
-</head>
-<body>
-<embed src="${FILENAMEPATH}" width="100%" height="100%" />	
-</body>
-</html>
