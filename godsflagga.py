@@ -3,6 +3,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 import random
+from config import COLOPHONE
 
 
 class Godsflagga():
@@ -236,8 +237,7 @@ class Godsflagga():
         c.drawString(x, y, data)
 
         # COLOPHONE
-        label = "AB ERNST HJ. RYDAHLS BROMSBANDSFABRIK, BRISGATAN 19, \
-SE-651 02 KARLSTAD, SWEDEN"
+        label = COLOPHONE
         c.setFont("Helvetica", 12)
         x = 3 * mm + x_margin
         y = 19 * mm
